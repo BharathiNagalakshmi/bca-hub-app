@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d1b3e0; /* Light purple background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            width: 90%;
+            max-width: 350px;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .input-box {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #a785bf;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 15px;
+            background-color: #d1b3e0;
+            color: black;
+        }
+
+        .login-btn {
+            width: 60%;
+            padding: 10px;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: red; /* Default color for error */
+        }
+
+        .success {
+            color: green; /* Success message color */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="icon">👤</div>
+        <div class="title">Student Login</div>
+        <input type="password" id="password" class="input-box" placeholder="Enter password" onfocus="showHint()">
+        <br>
+        <button class="login-btn" onclick="validatePassword()">Login</button>
+        <p id="message" class="message"></p>
+    </div>
+
+    <script>
+        let hintShown = false; // To ensure alert is shown only once
+
+        function showHint() {
+            if (!hintShown) {
+                alert("Password: bcastudent");
+                hintShown = true;
+            }
+        }
+
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var message = document.getElementById("message");
+
+            if (password === "bcastudent") {
+                message.textContent = "Login Successful!";
+                message.classList.add("success");
+
+                // Redirect to home page after 1 second
+                setTimeout(function() {
+                    window.location.href = "home.html"; 
+                }, 1000);
+            } else {
+                message.textContent = "Incorrect Password. Try Again!";
+                message.classList.remove("success");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #D1A3FF; /* Light purple background */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 300px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: black;
+        }
+        .btn {
+            display: block;
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            border: none;
+            background: white;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #c5a3ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Time Table</h2>
+        <button class="btn" onclick="goToPage('1bca.html')">I BCA</button>
+        <button class="btn" onclick="goToPage('2bcaa.html')">II BCA A</button>
+        <button class="btn" onclick="goToPage('2bcab.html')">II BCA B</button>
+        <button class="btn" onclick="goToPage('3bcaa.html')">III BCA A</button>
+        <button class="btn" onclick="goToPage('3bcab.html')">III BCA B</button>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>
+

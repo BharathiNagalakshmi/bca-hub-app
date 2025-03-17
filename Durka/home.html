@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d1b3e0; /* Light purple */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: white;
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            background-color: #a785bf;
+            padding: 10px;
+            border-radius: 15px 15px 0 0;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .sub-title {
+            background-color: #a785bf;
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .image-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: #d1b3e0;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #b799d0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="image.png.jpeg" alt="BCA Hub Logo" class="logo">
+            BCA HUB
+        </div>
+        <div class="sub-title">Bachelor Of Computer Applications</div>
+        
+        <div class="image-container">
+            <img src="images.jpg.jpg" alt="College Image">
+        </div>
+
+        <div class="button-container">
+            <button class="button" onclick="location.href='aboutus.html'">About Us</button>
+            <button class="button" onclick="location.href='syllabus.html'">Syllabus</button>
+            <button class="button" onclick="location.href='staffmembers.html'">Staff Members</button>
+            <button class="button" onclick="location.href='timetable.html'">Time Table</button>
+        </div>
+    </div>
+
+</body>
+</html>
